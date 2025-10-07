@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "28ec76b2-c2f0-4f88-b161-e56df4e56e24",
+		"name": "Students_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41198784"
+	},
+	"item": [
+		{
+			"name": "student",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/student",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/student",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "[\n  {\n    \"id\": \"2\",\n    \"name\": \"Sultana\",\n    \"location\": \"Bangladesh\",\n    \"phone\": \"016800166\",\n    \"courses\": [\n      \"python\",\n      \"Selenium\"\n    ]\n  },\n  {\n    \"id\": \"3\",\n    \"name\": \"Hema\",\n    \"location\": \"Bangladesh\",\n    \"phone\": \"01556790\",\n    \"courses\": [\n      \"C#\",\n      \"RestAPI\"\n    ]\n  },\n  {\n    \"id\": \"4\",\n    \"name\": \"Toma\",\n    \"location\": \"Canada\",\n    \"phone\": \"05618362\",\n    \"courses\": [\n      \"C#\",\n      \"Selenium\"\n    ]\n  }\n]"
+				}
+			]
+		},
+		{
+			"name": "student/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/student/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/student/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								"1"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"id\": \"1\",\n    \"name\": \"Tasnia\",\n    \"location\": \"Bangladesh\",\n    \"phone\": \"019868623\",\n    \"courses\": [\n      \"java\",\n      \"Selenium\"\n    ]\n  }"
+				}
+			]
+		},
+		{
+			"name": "student/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var ResponseData = pm.response.json()\r",
+							"\r",
+							"pm.test(\"HTTP status code Validation\",function(){\r",
+							"    pm.response.to.have.status(201)\r",
+							"})\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"4\",\n    \"name\": \"Toma\",\n    \"location\": \"Canada\",\n    \"phone\": \"05618362\",\n    \"courses\": [\n      \"C#\",\n      \"Selenium\"\n    ]\n  }"
+				},
+				"url": {
+					"raw": "{{url}}/student/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Toma\",\n    \"location\": \"Canada\",\n    \"phone\": \"05618362\",\n    \"courses\": [\n      \"C#\",\n      \"Selenium\"\n    ]\n   \"id\": 4\n  }"
+						},
+						"url": {
+							"raw": "{{url}}/student/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								"1"
+							]
+						}
+					},
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"name\": \"Toma\",\n    \"location\": \"Canada\",\n    \"phone\": \"05618362\",\n    \"courses\": [\n      \"C#\",\n      \"Selenium\"\n    ]\n   \"id\": 4\n  }"
+				}
+			]
+		},
+		{
+			"name": "student/4",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Arav\",\n    \"location\": \"Canada\",\n    \"phone\": \"05618362\",\n    \"courses\": [\n      \"C#\",\n      \"Selenium\"\n    ]\n \"id\": 4\n  }"
+				},
+				"url": {
+					"raw": "{{url}}/student/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"student",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Arav\",\n    \"location\": \"Canada\",\n    \"phone\": \"05618362\",\n    \"courses\": [\n      \"C#\",\n      \"Selenium\"\n    ]\n \"id\": 4\n  }"
+						},
+						"url": {
+							"raw": "{{url}}/student/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								"4"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"name\": \"Arav\",\n    \"location\": \"Canada\",\n    \"phone\": \"05618362\",\n    \"courses\": [\n      \"C#\",\n      \"Selenium\"\n    ]\n \"id\": 4\n  }"
+				}
+			]
+		},
+		{
+			"name": "student/4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/student/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"student",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/student/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								"4"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://42cc4674-00ed-4c89-a89a-0239e89e8d1d.mock.pstmn.io"
+		}
+	]
+}

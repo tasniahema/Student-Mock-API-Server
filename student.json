@@ -1,0 +1,39 @@
+{
+  "student": [
+    {
+      "id": "1",
+      "name": "Tasnia",
+      "location": "Bangladesh",
+      "phone": "019868623",
+      "courses": ["java", "Selenium"]
+    },
+    {
+      "id": "2",
+      "name": "Sultana",
+      "location": "Bangladesh",
+      "phone": "016800166",
+      "courses": ["python", "Selenium"]
+    },
+    {
+      "id": "3",
+      "name": "Hema",
+      "location": "Bangladesh",
+      "phone": "01556790",
+      "courses": ["C#", "RestAPI"]
+    },
+    {
+      "id": "4",
+      "name": "Toma",
+      "location": "Canada",
+      "phone": "05618362",
+      "courses": ["C#", "Selenium"]
+    },
+    {
+      "id": "4",
+      "name": "Arav",
+      "location": "Canada",
+      "phone": "05618362",
+      "courses": ["C#", "Selenium"]
+    }
+  ]
+}
